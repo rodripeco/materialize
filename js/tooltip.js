@@ -151,8 +151,8 @@
     _positionTooltip() {
       let origin = this.el,
         tooltip = this.tooltipEl,
-        originHeight = origin.offsetHeight,
-        originWidth = origin.offsetWidth,
+        originHeight = origin.offsetHeight || origin.getBoundingClientRect().height,
+        originWidth = origin.offsetWidth || origin.getBoundingClientRect().width,
         tooltipHeight = tooltip.offsetHeight,
         tooltipWidth = tooltip.offsetWidth,
         newCoordinates,
